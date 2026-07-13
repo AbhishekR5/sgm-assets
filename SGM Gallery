@@ -1,0 +1,729 @@
+<section id="sgm-gallery">
+
+    
+    <div class="sgm-bg"></div>
+
+    
+
+    <div class="sgm-header">
+
+        <img src="https://abhishekr5-anilsgm.odoo.com/web/image/879" class="sgm-logo" alt="SGM Logo" loading="lazy">
+
+        <h1>SGM Gallery</h1>
+
+        <p>
+            Explore Our Premium Special Effects Portfolio
+        </p>
+
+    </div>
+
+    
+
+    <div class="gallery-filter">
+
+        <button class="filter-btn active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter-btn" data-filter="cold">
+            ❄ Cold Pyro
+        </button>
+
+        <button class="filter-btn" data-filter="co2">
+            ☁ CO₂ Jets
+        </button>
+
+        <button class="filter-btn" data-filter="bubble">
+            🫧 Bubble Fog
+        </button>
+
+        <button class="filter-btn" data-filter="sparkle">
+            ✨ Sparkle
+        </button>
+
+        <button class="filter-btn" data-filter="flame">
+            🔥 Flame
+        </button>
+
+        <button class="filter-btn" data-filter="laser">
+            💚 Laser
+        </button>
+
+        <button class="filter-btn" data-filter="fireworks">
+            🎆 Fireworks
+        </button>
+
+    </div>
+
+    
+
+    <div id="gallery-grid">
+
+        
+
+    </div>
+
+</section>
+
+
+
+<style>
+
+/*==================================================
+BACKGROUND
+==================================================*/
+
+#sgm-gallery{
+    position:relative;
+    width:100vw;
+    margin-left:calc(-50vw + 50%);
+    padding:80px 0;
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top,#2b2508 0%,#0a0a0a 45%,#000 100%);
+
+    color:#fff;
+    font-family:"Poppins",sans-serif;
+}
+
+/* Gold Glow */
+
+#sgm-gallery::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    left:50%;
+    top:-350px;
+    transform:translateX(-50%);
+    border-radius:50%;
+    background:rgba(255,196,0,.08);
+    filter:blur(120px);
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.sgm-header{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+/* ==========================================
+   SGM LOGO
+========================================== */
+
+/* ==========================================
+   SGM LOGO
+========================================== */
+
+.sgm-logo{
+
+    width:150px;
+    aspect-ratio:1 / 1;
+
+    display:block;
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    object-fit:contain;
+
+    background:#000;
+
+    padding:6px;
+
+    border:3px solid #FFD54A;
+
+    box-shadow:
+        0 0 25px rgba(255,215,0,.45);
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .sgm-logo{
+
+        width:110px;
+
+        padding:5px;
+
+    }
+
+}
+
+
+.sgm-header h1{
+
+    font-size:64px;
+
+    margin-top:20px;
+
+    color:#FFD54A;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+.sgm-header p{
+
+    color:#d7d7d7;
+
+    font-size:18px;
+
+    margin-top:12px;
+
+}
+
+/*==================================================
+FILTER BAR
+==================================================*/
+
+.gallery-filter{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-bottom:60px;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.filter-btn{
+
+    background:rgba(255,255,255,.05);
+
+    color:#fff;
+
+    border:1px solid rgba(255,215,0,.35);
+
+    padding:13px 24px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(12px);
+
+}
+
+.filter-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#FFD54A;
+
+    color:#000;
+
+    box-shadow:
+        0 0 18px rgba(255,215,0,.45);
+
+}
+
+.filter-btn.active{
+
+    background:#FFD54A;
+
+    color:#000;
+
+    font-weight:600;
+
+    box-shadow:
+        0 0 20px rgba(255,215,0,.55);
+
+}
+
+/*==================================================
+GRID
+==================================================*/
+
+#gallery-grid{
+    width:1400px;
+    max-width:92%;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+}
+
+@media(max-width:1200px){
+    #gallery-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .sgm-header{
+
+        padding:20px;
+
+        margin-bottom:35px;
+
+    }
+
+    .sgm-logo{
+
+        width:110px;
+
+        height:auto;
+
+        margin-bottom:15px;
+
+    }
+
+    .sgm-header h1{
+
+        font-size:46px;
+
+        line-height:1.1;
+
+        margin:10px 0;
+
+    }
+
+    .sgm-header p{
+
+        font-size:18px;
+
+        line-height:1.5;
+
+        padding:0 20px;
+
+    }
+
+}
+
+@media(max-width:480px){
+    #gallery-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.gallery-card{
+
+    background:#111;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.45s;
+
+    border:1px solid rgba(255,215,0,.18);
+
+}
+
+.gallery-card img{
+
+    width:100%;
+
+    aspect-ratio:3/4;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.45s;
+
+}
+
+.gallery-title{
+
+    padding:18px;
+
+    text-align:center;
+
+    color:#FFD54A;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.gallery-card:hover{
+
+    transform:
+        translateY(-10px)
+        scale(1.03);
+
+    border-color:#FFD54A;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.45),
+        0 0 22px rgba(255,215,0,.35);
+
+}
+
+.gallery-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+ANIMATION
+==================================================*/
+
+.gallery-card{
+
+    animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+    opacity:0;
+
+    transform:
+        translateY(35px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+
+}
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+.sgm-header h1{
+
+    font-size:42px;
+
+}
+
+.sgm-logo{
+
+    width:120px;
+
+}
+
+.gallery-filter{
+
+    gap:10px;
+
+}
+
+.filter-btn{
+
+    font-size:13px;
+
+    padding:10px 18px;
+
+}
+
+#gallery-grid{
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+}
+
+</style>
+
+
+========================================================================================================================================================= 
+
+
+<script>
+
+
+
+const galleryData = [
+
+/* ===== COLD PYRO ===== */
+{
+category:"cold",
+title:"Wedding Entry",
+subtitle:"Mysuru",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"cold",
+title:"Stage Performance",
+subtitle:"Bangalore",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"cold",
+title:"Grand Opening",
+subtitle:"Hyderabad",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"cold",
+title:"Live Concert",
+subtitle:"Chennai",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+
+/* ===== CO₂ JETS ===== */
+{
+category:"co2",
+title:"Concert Blast",
+subtitle:"Mysuru",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"co2",
+title:"DJ Night",
+subtitle:"Bangalore",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"co2",
+title:"Wedding Entry",
+subtitle:"Hyderabad",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"co2",
+title:"Festival",
+subtitle:"Chennai",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+
+/* ===== BUBBLE FOG ===== */
+{
+category:"bubble",
+title:"First Dance",
+subtitle:"Mysuru",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"bubble",
+title:"Wedding Stage",
+subtitle:"Bangalore",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"bubble",
+title:"Reception",
+subtitle:"Hyderabad",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"bubble",
+title:"Couple Entry",
+subtitle:"Chennai",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+
+/* ===== SPARKLE ===== */
+{
+category:"sparkle",
+title:"Wedding Stage",
+subtitle:"Mysuru",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"sparkle",
+title:"Award Function",
+subtitle:"Bangalore",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"sparkle",
+title:"Reception",
+subtitle:"Hyderabad",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"sparkle",
+title:"Grand Entry",
+subtitle:"Chennai",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+
+/* ===== FLAME ===== */
+{
+category:"flame",
+title:"Live Concert",
+subtitle:"Mysuru",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"flame",
+title:"Music Festival",
+subtitle:"Bangalore",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"flame",
+title:"Night Show",
+subtitle:"Hyderabad",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"flame",
+title:"Opening Ceremony",
+subtitle:"Chennai",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+
+/* ===== LASER ===== */
+{
+category:"laser",
+title:"Laser Mapping",
+subtitle:"Mysuru",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"laser",
+title:"Corporate Event",
+subtitle:"Bangalore",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"laser",
+title:"Night Event",
+subtitle:"Hyderabad",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"laser",
+title:"Festival",
+subtitle:"Chennai",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+
+/* ===== FIREWORKS ===== */
+{
+category:"fireworks",
+title:"Wedding Finale",
+subtitle:"Mysuru",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"fireworks",
+title:"New Year",
+subtitle:"Bangalore",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"fireworks",
+title:"Grand Finale",
+subtitle:"Hyderabad",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+},
+{
+category:"fireworks",
+title:"Celebration",
+subtitle:"Chennai",
+image:"https://abhishekr5-anilsgm.odoo.com/web/image/1684-93034301/ChatGPT%20Image%20Jul%2010%2C%202026%2C%2006_57_36%20PM.png?height=256"
+}
+
+];
+
+
+const grid=document.getElementById("gallery-grid");
+
+const buttons=document.querySelectorAll(".filter-btn");
+
+function render(category="all"){
+
+grid.innerHTML="";
+
+galleryData
+.filter(item=>category==="all" || item.category===category)
+.forEach(item=>{
+
+const card=document.createElement("div");
+
+card.className="gallery-card";
+
+card.innerHTML=`
+
+<img src="${item.image}" loading="lazy">
+
+<div class="gallery-title">
+
+<div>${item.title}</div>
+
+<small style="display:block;color:#bbb;font-size:13px;margin-top:6px;">
+${item.subtitle}
+</small>
+
+</div>
+
+`;
+
+grid.appendChild(card);
+
+});
+
+}
+
+buttons.forEach(btn=>{
+
+btn.onclick=function(){
+
+buttons.forEach(b=>b.classList.remove("active"));
+
+this.classList.add("active");
+
+render(this.dataset.filter);
+
+}
+
+});
+
+render();
+
+</script>
